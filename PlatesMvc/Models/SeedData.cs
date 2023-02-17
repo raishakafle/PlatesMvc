@@ -14,13 +14,18 @@ namespace PlatesMvc.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<ApplicationDbContext>>()))
             {
-                // Look for any movies.
+                // Look for any plates.
                 if (context.Plates.Any())
                 {
                     return;   // DB has been seeded
                 }
 
+
+                //Added field and its respective properties to it.
+
                 context.Plates.AddRange(
+
+                    //One
                     new Plates
                     {
                         Material = "Glass",
@@ -33,6 +38,7 @@ namespace PlatesMvc.Models
 
                     },
 
+                    //Two
                     new Plates
                     {
                         Material = "Porcelain",
@@ -45,6 +51,7 @@ namespace PlatesMvc.Models
 
                     },
 
+                    //Three
                     new Plates
                     {
                         Material = "Ceramic",
@@ -57,6 +64,7 @@ namespace PlatesMvc.Models
 
                     },
 
+                    //Four
                     new Plates
                     {
                         Material = "Wood",
@@ -69,6 +77,7 @@ namespace PlatesMvc.Models
 
                     },
 
+                    //Five
                     new Plates
                     {
                         Material = "Plastic",
@@ -81,6 +90,7 @@ namespace PlatesMvc.Models
 
                     },
 
+                    //Six
                     new Plates
                     {
                         Material = "Melamine",
@@ -93,6 +103,7 @@ namespace PlatesMvc.Models
 
                     },
 
+                    //Seven
                     new Plates
                     {
                         Material = "Stainless Steel",
@@ -105,6 +116,7 @@ namespace PlatesMvc.Models
 
                     },
 
+                    //Eight
                     new Plates
                     {
                         Material = "Bamboo",
@@ -117,6 +129,8 @@ namespace PlatesMvc.Models
 
                     },
 
+
+                    //Nine
                     new Plates
                     {
                         Material = "Earthenware",
@@ -129,6 +143,7 @@ namespace PlatesMvc.Models
 
                     },
 
+                    //Ten
                     new Plates
                     {
                         Material = "Stone",
@@ -141,6 +156,7 @@ namespace PlatesMvc.Models
 
                     }
 
+                    //Fields  and properties end. 
                 );
                 context.SaveChanges();
             }

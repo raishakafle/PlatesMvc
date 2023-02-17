@@ -3,8 +3,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PlatesMvc.Models
 {
+    //This is a Public Class named Plates
     public class Plates
     {
+
+        //Declaring various fields with different data types into the system. 
+
+        //This is a primary Key. 
         public int Id { get; set; }
         public string Material { get; set; }
 
@@ -21,3 +26,5 @@ namespace PlatesMvc.Models
     }
 
 }
+
+//Session Ends here..
