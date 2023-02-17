@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using PlatesMvc.Models;
 
 namespace PlatesMvc.Data
 {
@@ -12,5 +13,6 @@ namespace PlatesMvc.Data
             : base(options)
         {
         }
+        public DbSet<PlatesMvc.Models.Plates> Plates { get; set; }
     }
 }
